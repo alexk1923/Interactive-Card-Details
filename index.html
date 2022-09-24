@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link rel="stylesheet" href="./style.css" />
+
+		<title>Frontend Mentor | Interactive card details form</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+
+		<script src="./script.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bg-main-container">
+				<div class="card front-card-info">
+					<img src="./images/card-logo.svg" />
+					<p id="card-number">0000 0000 0000 0000</p>
+
+					<div class="bottom-info">
+						<p id="card-name">Jane Appleseed</p>
+						<p id="card-date">00/00</p>
+					</div>
+				</div>
+				<div class="card back-card-info">
+					<p id="card-cvc">000</p>
+				</div>
+			</div>
+
+			<div class="form-container">
+				<form id="success-form" action="./">
+					<img src="./images/icon-complete.svg" alt="succes" />
+					<h1>Thank you !</h1>
+					<p>We've added your card details</p>
+					<button>Continue</button>
+				</form>
+
+				<form id="card-submit" action="/">
+					<label for="card-name-input">Cardholder Name</label>
+					<input
+						required
+						type="text"
+						name="card-name-input"
+						id="card-name-input"
+						placeholder="e.g. Jane Appleseed"
+						maxlength="35"
+					/>
+					<label for="card-number-input">Card Number</label>
+					<input
+						required
+						type="text"
+						name="card-number-input"
+						id="card-number-input"
+						autocomplete="cc-number"
+						maxlength="19"
+						placeholder="e.g. 1234 5678 9123 0000"
+						pattern="[0-9\s]{19}"
+						title="Format (DIGITS ONLY): xxxx xxxx xxxx xxxx"
+					/>
+
+					<div class="date-cvc-container">
+						<div class="date-container">
+							<label for="exp-date">Exp. Date (MM/YY)</label>
+							<div class="date-inputs">
+								<input
+									required
+									type="text"
+									name="exp-date-month"
+									id="exp-date-month"
+									placeholder="MM"
+									maxlength="2"
+									pattern=".{2}"
+									title="Format: MM. e.g. 03 for March"
+								/>
+								<input
+									required
+									type="text"
+									name="exp-date-year"
+									id="exp-date-year"
+									placeholder="YY"
+									maxlength="2"
+									pattern=".{2}"
+									title="Format: YY. e.g. 25 for 2025"
+								/>
+							</div>
+						</div>
+						<div class="cvc-container">
+							<label for="cvc">CVC</label>
+							<input
+								required
+								type="text"
+								name="cvc"
+								id="cvc"
+								placeholder="e.g. 123"
+								maxlength="3"
+								pattern=".{3}"
+								title="Last 3 digits on the back of your card"
+							/>
+						</div>
+					</div>
+
+					<button>Confirm</button>
+				</form>
+			</div>
+		</div>
+		<!-- Completed state start -->
+
+		Thank you!
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Alex Kullman</a>.
+		</div>
+	</body>
+</html>
