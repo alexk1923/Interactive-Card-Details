@@ -111,7 +111,7 @@ form > * {
 	aspect-ratio: 2/1;
 	position: absolute;
 	left: 10%;
-	top: 50%;
+	top: 55%;
 }
 
 .back-card-info p {
@@ -148,7 +148,7 @@ form > * {
 	justify-content: center;
 	gap: 0.5em;
 	width: 50%;
-	transform: translateX(10%);
+	transform: translateY(-15vh);
 }
 
 @media screen and (max-width: 375px) {
