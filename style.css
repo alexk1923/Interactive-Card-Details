@@ -6,7 +6,7 @@
 	--dark-grayish-violet: rgb(142, 133, 147);
 	--very-dark-violet: rgb(33, 9, 47);
 	--dark-violet: rgba(33, 9, 47, 0.9);
-	--default-font-size: clamp(1vw, 18px, 2vw);
+	--default-font-size: clamp(1vh, 18px, 2vw);
 }
 
 body {
@@ -85,7 +85,8 @@ form > * {
 }
 
 .front-card-info p#card-number {
-	font-size: 2em;
+	font-size: clamp(1.5vh, 2.5em, 2.5vw);
+	margin-bottom: 1.2em;
 }
 
 .front-card-info img {
